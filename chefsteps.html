@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src='./chefsteps.js' type='text/javascript'></script>
+  </head>
+    <body>
+      <!-- Input fields -->
+      <h2>Remove duplicate values from an array</h2>
+      <p>Array contents:</p>
+      <script>
+        for (var i = 0; i < emailArray.length; i++) {
+            document.write("<li>" + emailArray[i] + "</li>");
+        }
+      </script>
+      <p>
+        <span>Enter number of times to copy array: (10000 max)</span>
+        <span><input name="array-length" id="array-length" type="number" value="10000" max="10000" /></span>
+      </p>
+      <p>
+        <span>Enter number of times to run dedupe functions:</span>
+        <span><input name="loop-number" id="loop-number" type="number" value="1"/></span>
+      </p>
+      <button type="button" onclick="run();">Run!</button>
+
+      <!-- Output -->
+      <p id="array-info"></p>
+      <p id="removedupes-time"></p>
+      <p id="removedupesecma6-time"></p>
+
+    </body>
+</html>
