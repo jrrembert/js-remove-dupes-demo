@@ -33,7 +33,10 @@ function removeDupesEcma6(array) {
     return new Set(array); // Someone: "That's it?" Me: "Yep, that's it.""
 }
 
+/* Helper functions */
+
 function run() {
+    // Function for demoing dedupe functions and measuring performance.
     var arraySize = document.getElementById('array-length').value || 
         duplicateArrayLength;
     var loopNum = document.getElementById('loop-number').value || 
@@ -59,8 +62,6 @@ function run() {
     dedupe(removeDupes, 'removedupes-time');
     dedupe(removeDupesEcma6, 'removedupesecma6-time');
 }
-
-/* Helper functions */
 
 function makeDuplicates(array, dupeArrayNum) {
     // Given an array
