@@ -6,8 +6,8 @@ var emailArray = ['clint@sounders.com', 'obefemi@sounders.com',
                   'leo@sounders.com', 'zach@sounders.com', 
                   'chad@sounders.com', 'tyrone@sounders.com']
 
-var duplicateArrayLength = 10000;      // Number of times to copy emailArray.
-var duplicateArrayLoopNumber = 10; // Number of times to run de-dupe function.
+var duplicateArrayLength = 10000;     // Number of times to copy emailArray.
+var duplicateArrayLoopNumber = 10;    // Number of times to run de-dupe function.
 
 function removeDupes(array) {
     // Given an array, remove duplicate values if present and return a new array.
@@ -56,7 +56,7 @@ function run() {
         var time = document.getElementById(id);
         time.innerHTML = dedupeFunc.name + " execution time: ( " + 
             arrayLength + " items running " + loopNum + " time(s) )<br>" + 
-            (new Date() - date) / duplicateArrayLoopNumber + " ms/run";
+            (new Date() - date) / loopNum + " ms/run";
     }
 
     dedupe(removeDupes, 'removedupes-time');
@@ -64,7 +64,8 @@ function run() {
 }
 
 function makeDuplicates(array, dupeArrayNum) {
-    // Given an array
+    // Given an array, create a new array by concatenating the array
+    // x times where x is equal to the value of dupeArrayNum.
     var newArray = [];
 
     while ( dupeArrayNum-- ) {
